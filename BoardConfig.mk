@@ -129,10 +129,16 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # SELinux
 # BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
+#DEVICE_MANIFEST_FILE := vendor/samsung/a30/proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.base@1.0-service.xml
+
+#DEVICE_MANIFEST_FILE := vendor/samsung/a30/proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.base@1.0-service.xml
+
+#DEVICE_MATRIX_FILE := vendor/samsung/a30/proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.base@1.0-service.xml
+
 # Lineage hardware
-ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
+ifneq ($(findstring aosp, $(TARGET_PRODUCT)),)
 BOARD_HARDWARE_CLASS := \
-    hardware/samsung/lineagehw
+    hardware/samsung/
 endif
 
 # Inherit from the proprietary version
